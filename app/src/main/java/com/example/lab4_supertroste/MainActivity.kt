@@ -20,8 +20,11 @@ import androidx.compose.runtime.Composable
 import androidx.compose.runtime.mutableStateOf
 import androidx.compose.runtime.remember
 import androidx.compose.ui.Modifier
+import androidx.compose.ui.graphics.Color
+import androidx.compose.ui.text.font.FontWeight
 import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.unit.dp
+import androidx.compose.ui.unit.sp
 import com.example.lab4_supertroste.ui.theme.Lab4_SupertrosteTheme
 
 class MainActivity : ComponentActivity() {
@@ -46,37 +49,50 @@ fun MainContent(modifier: Modifier = Modifier) {
     Column(modifier = modifier.fillMaxSize()) {
         Text(
             text = "Lista de Tareas",
-            modifier = Modifier.padding(16.dp)
+            modifier = Modifier.padding(16.dp),
+            fontSize = 20.sp,
+            fontWeight = FontWeight.Bold,
+            color = Color.Blue
         )
         LazyColumn(modifier = Modifier.weight(1f)) {
             items(List(10) { "Tarea $it" }) { item ->
                 Text(
                     text = item,
-                    modifier = Modifier.padding(8.dp)
+                    modifier = Modifier.padding(8.dp),
+                    fontSize = 16.sp,
+                    color = Color.DarkGray
                 )
             }
         }
 
-        Divider(modifier = Modifier.padding(vertical = 8.dp))
+        Divider(modifier = Modifier.padding(vertical = 8.dp), color = Color.Gray)
 
         Text(
             text = "Categorías",
-            modifier = Modifier.padding(16.dp)
+            modifier = Modifier.padding(16.dp),
+            fontSize = 20.sp,
+            fontWeight = FontWeight.Bold,
+            color = Color.Blue
         )
         LazyRow(modifier = Modifier.weight(1f)) {
             items(List(10) { "Categoría $it" }) { item ->
                 Text(
                     text = item,
-                    modifier = Modifier.padding(8.dp)
+                    modifier = Modifier.padding(8.dp),
+                    fontSize = 16.sp,
+                    color = Color.DarkGray
                 )
             }
         }
 
-        Divider(modifier = Modifier.padding(vertical = 8.dp))
+        Divider(modifier = Modifier.padding(vertical = 8.dp), color = Color.Gray)
 
         Text(
             text = "Recordatorio",
-            modifier = Modifier.padding(16.dp)
+            modifier = Modifier.padding(16.dp),
+            fontSize = 20.sp,
+            fontWeight = FontWeight.Bold,
+            color = Color.Blue
         )
         Checkbox(
             checked = checkedState.value,
@@ -84,11 +100,14 @@ fun MainContent(modifier: Modifier = Modifier) {
             modifier = Modifier.padding(8.dp)
         )
 
-        Divider(modifier = Modifier.padding(vertical = 8.dp))
+        Divider(modifier = Modifier.padding(vertical = 8.dp), color = Color.Gray)
 
         Text(
             text = "Prioridad",
-            modifier = Modifier.padding(16.dp)
+            modifier = Modifier.padding(16.dp),
+            fontSize = 20.sp,
+            fontWeight = FontWeight.Bold,
+            color = Color.Blue
         )
         Row(modifier = Modifier.padding(8.dp)) {
             listOf("Baja", "Media", "Alta").forEach { text ->
@@ -98,7 +117,9 @@ fun MainContent(modifier: Modifier = Modifier) {
                 )
                 Text(
                     text = text,
-                    modifier = Modifier.padding(start = 8.dp)
+                    modifier = Modifier.padding(start = 8.dp),
+                    fontSize = 16.sp,
+                    color = Color.DarkGray
                 )
             }
         }
