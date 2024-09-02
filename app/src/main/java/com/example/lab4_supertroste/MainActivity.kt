@@ -12,6 +12,7 @@ import androidx.compose.foundation.lazy.LazyColumn
 import androidx.compose.foundation.lazy.LazyRow
 import androidx.compose.foundation.lazy.items
 import androidx.compose.material3.Checkbox
+import androidx.compose.material3.Divider
 import androidx.compose.material3.RadioButton
 import androidx.compose.material3.Scaffold
 import androidx.compose.material3.Text
@@ -56,6 +57,8 @@ fun MainContent(modifier: Modifier = Modifier) {
             }
         }
 
+        Divider(modifier = Modifier.padding(vertical = 8.dp))
+
         Text(
             text = "Categorías",
             modifier = Modifier.padding(16.dp)
@@ -69,6 +72,8 @@ fun MainContent(modifier: Modifier = Modifier) {
             }
         }
 
+        Divider(modifier = Modifier.padding(vertical = 8.dp))
+
         Text(
             text = "Recordatorio",
             modifier = Modifier.padding(16.dp)
@@ -78,6 +83,8 @@ fun MainContent(modifier: Modifier = Modifier) {
             onCheckedChange = { checkedState.value = it },
             modifier = Modifier.padding(8.dp)
         )
+
+        Divider(modifier = Modifier.padding(vertical = 8.dp))
 
         Text(
             text = "Prioridad",
